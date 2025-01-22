@@ -14,5 +14,10 @@ a {
 }
 
 a:hover {
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
+
+a:hover i {
+  color: #000;
+  transition: color ease-in-out 0.3s;
+}
