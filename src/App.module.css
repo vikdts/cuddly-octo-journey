@@ -23,8 +23,14 @@ a:hover i {
 }
 
 i {
-    color: #cfced3;
-    font-size: 1.6rem;
-    padding: 7px;
-    vertical-align: middle;
-  }
+  color: #cfced3;
+  font-size: 1.6rem;
+  padding: 7px;
+  vertical-align: middle;
+}
+
+i:hover {
+  cursor: pointer;
+  transition: color ease-in-out 0.3s;
+  color: #000;
+}
