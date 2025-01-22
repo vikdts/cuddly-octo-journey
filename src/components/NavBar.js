@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavBar, Container} from "react-bootstrap";
 
 const NavBar = () => {
   return (
