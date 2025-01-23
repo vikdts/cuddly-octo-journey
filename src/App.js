@@ -10,7 +10,7 @@ function App() {
         <Container className={styles.Main}>
           <Switch>
             <Route exact path="/" render={()=><h1>Home</h1>}/>
-            <Route exact path="/signin" render={()=><h1>Signin</h1>}/>
+            <Route exact path="/signin" render={()=><h1>Sign in</h1>}/>
           </Switch>
         </Container>
 
