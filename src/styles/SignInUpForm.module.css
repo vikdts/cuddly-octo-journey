@@ -29,3 +29,7 @@
   display: block;
   margin: auto;
 }
+
+.Link span {
+    color: #555555;
+  }
