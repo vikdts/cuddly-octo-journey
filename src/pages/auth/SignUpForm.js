@@ -11,10 +11,10 @@ const SignUpForm = () => {
   return (
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2" md={6}>
-        <Container>
+        <Container className={`${appStyles.Content} p-4 `}>
           <h1>sign up</h1>
         </Container>
-        <Container>
+        <Container className={`mt-3 ${appStyles.Content}`}>
           <Link>Have an account?<span>Sign in</span></Link>
         </Container>
       </Col>
