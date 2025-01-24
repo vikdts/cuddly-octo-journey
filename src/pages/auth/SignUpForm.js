@@ -9,7 +9,7 @@ import { Col, Row, Container, Image } from "react-bootstrap";
 
 const SignUpForm = () => {
   return (
-    <Row>
+    <Row className={styles.Row}>
       <Col>
         <Container>
           <h1>sign up</h1>
