@@ -10,7 +10,7 @@ import { Col, Row, Container, Image } from "react-bootstrap";
 const SignUpForm = () => {
   return (
     <Row className={styles.Row}>
-      <Col>
+      <Col className="my-auto py-2 p-md-2" md={6}>
         <Container>
           <h1>sign up</h1>
         </Container>
@@ -18,7 +18,7 @@ const SignUpForm = () => {
           <Link>Have an account?<span>Sign in</span></Link>
         </Container>
       </Col>
-      <Col>
+      <Col className="my-auto d-none d-md-block p-2" md={6}>
         <Image />
       </Col>
     </Row>
