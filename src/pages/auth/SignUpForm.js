@@ -15,7 +15,7 @@ const SignUpForm = () => {
           <h1 className={styles.Header}>sign up</h1>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
-          <Link>Have an account?<span>Sign in</span></Link>
+          <Link className={styles.Link} to="/signin">Have an account?<span>Sign in</span></Link>
         </Container>
       </Col>
       <Col className="my-auto d-none d-md-block p-2" md={6}>
