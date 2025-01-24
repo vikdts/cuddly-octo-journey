@@ -22,3 +22,10 @@
   text-transform: uppercase;
   color: #000;
 }
+
+.Link {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
