@@ -15,7 +15,7 @@ const SignUpForm = () => {
           <h1>sign up</h1>
         </Container>
         <Container>
-          <Link>Have an account?</Link>
+          <Link>Have an account?<span>Sign in</span></Link>
         </Container>
       </Col>
       <Col>
