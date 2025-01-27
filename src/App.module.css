@@ -62,3 +62,8 @@ i:hover {
   transition: color ease-in-out 0.3s;
   color: #000;
 }
+
+figure {
+    text-align: center;
+    display: inline-block;
+  }
