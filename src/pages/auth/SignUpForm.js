@@ -15,7 +15,7 @@ const SignUpForm = () => {
           <h1 className={styles.Header}>sign up</h1>
           <Form>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>username</Form.Label>
               <Form.Control type="text" placeholder="Enter email" />
             </Form.Group>
 
