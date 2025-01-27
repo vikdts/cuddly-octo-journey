@@ -13,3 +13,11 @@
   border-color: transparent;
   cursor: pointer;
 }
+
+.Button:hover:active {
+  background-color: #000 !important;
+}
+
+.Button:active {
+  background-color: #000 !important;
+}
