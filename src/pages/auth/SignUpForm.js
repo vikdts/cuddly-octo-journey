@@ -5,7 +5,7 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-import { Col, Row, Container, Image } from "react-bootstrap";
+import { Form, Button, Col, Row, Container, Image } from "react-bootstrap";
 
 const SignUpForm = () => {
   return (
