@@ -24,7 +24,11 @@ const SignUpForm = () => {
         className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
         md={6}
       >
-        <Image />
+        <Image
+          src={
+            "https://res.cloudinary.com/dmux1cvft/image/upload/v1737966869/pexels-ekaterina-bolovtsova-5264091_bjgzcm.jpg"
+          }
+        />
       </Col>
     </Row>
   );
