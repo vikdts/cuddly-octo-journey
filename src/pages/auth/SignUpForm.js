@@ -16,7 +16,7 @@ const SignUpForm = () => {
           <Form>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>username</Form.Label>
-              <Form.Control type="text" placeholder="Enter email" />
+              <Form.Control type="text" placeholder="username" name="username" />
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
