@@ -21,3 +21,7 @@
 .Button:active {
   background-color: #000 !important;
 }
+
+.Button:focus {
+    background-color: #000;
+  }
