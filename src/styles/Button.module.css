@@ -30,3 +30,39 @@
   padding: 10px 50px;
   width: 100%;
 }
+
+.Gray,
+.GrayOutline:hover,
+.Bright:hover {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.GrayOutline,
+.Gray:hover {
+  /* border: 1px solid #2142b2; */
+  background-color: #ffffff;
+  color: #555555;
+}
+
+.Black,
+.BlackOutline:hover {
+  /* background-color: #242a3d;
+  color: white; */
+  background-color: #242a3d;
+  color: #fff;
+}
+
+.Black:hover,
+.BlackOutline {
+  /* background-color: #dadadf;
+  color: #242a3d;
+  border-color: #242a3d; */
+  background-color: #fff;
+  color: #242a3d;
+}
+
+.Bright {
+  background-color: #555555;
+  color: #000;
+}
