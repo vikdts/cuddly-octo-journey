@@ -23,12 +23,21 @@ const SignUpForm = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="password">
+            <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Password"
                 name="password1"
+              />
+            </Form.Group>
+
+            <Form.Group controlId="password2">
+              <Form.Label className="d-none">Confirm Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Confirm Password"
+                name="password2"
               />
             </Form.Group>
 
