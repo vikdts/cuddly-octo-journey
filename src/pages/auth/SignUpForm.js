@@ -25,8 +25,8 @@ const SignUpForm = () => {
   };
 
   const handleSubmit = async (event) => {
+    event.preventDefault();
   };
-
 
   return (
     <Row className={styles.Row}>
