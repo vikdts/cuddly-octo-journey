@@ -44,7 +44,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
 
-            <Button variant="secondary" type="submit">
+            <Button className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`} type="submit">
               Sign up
             </Button>
           </Form>
