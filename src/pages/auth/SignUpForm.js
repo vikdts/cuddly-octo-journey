@@ -16,6 +16,7 @@ const SignUpForm = () => {
     password2: "",
   });
   const { username, password1, password2 } = signUpData;
+  const history = useHistory
 
   const handleChange = (event) => {
     setSignUpData({
