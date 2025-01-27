@@ -23,5 +23,10 @@
 }
 
 .Button:focus {
-    background-color: #000;
-  }
+  background-color: #000;
+}
+
+.Wide {
+  padding: 10px 50px;
+  width: 100%;
+}
