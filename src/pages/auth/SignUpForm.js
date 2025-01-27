@@ -25,6 +25,7 @@ const SignUpForm = () => {
         md={6}
       >
         <Image
+          className={`${appStyles.FillerImage}`}
           src={
             "https://res.cloudinary.com/dmux1cvft/image/upload/v1737966869/pexels-ekaterina-bolovtsova-5264091_bjgzcm.jpg"
           }
