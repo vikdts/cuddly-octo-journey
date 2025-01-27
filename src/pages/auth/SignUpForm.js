@@ -7,6 +7,8 @@ import appStyles from "../../App.module.css";
 
 import { Form, Button, Col, Row, Container, Image } from "react-bootstrap";
 
+import axios from "axios";
+
 const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
     username: "",
@@ -21,6 +23,8 @@ const SignUpForm = () => {
       [event.target.name]: event.target.value,
     });
   };
+
+
   return (
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2" md={6}>
