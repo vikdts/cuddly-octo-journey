@@ -45,7 +45,7 @@ const SignUpForm = () => {
             </Form.Group>
 
             <Button variant="secondary" type="submit">
-              Submit
+              Sign up
             </Button>
           </Form>
         </Container>
