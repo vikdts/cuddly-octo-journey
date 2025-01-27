@@ -13,6 +13,7 @@ const SignUpForm = () => {
     password1: "",
     password2: "",
   });
+  const { username, password1, password2 } = signUpData;
   return (
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2" md={6}>
