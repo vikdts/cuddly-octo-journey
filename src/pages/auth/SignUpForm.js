@@ -5,7 +5,15 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-import { Alert, Form, Button, Col, Row, Container, Image } from "react-bootstrap";
+import {
+  Alert,
+  Form,
+  Button,
+  Col,
+  Row,
+  Container,
+  Image,
+} from "react-bootstrap";
 
 import axios from "axios";
 
@@ -44,6 +52,7 @@ const SignUpForm = () => {
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>sign up</h1>
+
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>
@@ -73,6 +82,11 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.password1?.map((message, idx) => (
+              <Alert key={idx} variant="warning">
+                {message}
+              </Alert>
+            ))}
 
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Confirm Password</Form.Label>
@@ -96,7 +110,7 @@ const SignUpForm = () => {
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signin">
-            Have an account? <span>SIGN IN</span>
+            Have an account? <span>Sign In</span>
           </Link>
         </Container>
       </Col>
