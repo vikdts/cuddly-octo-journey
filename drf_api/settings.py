@@ -20,6 +20,8 @@ CLOUDINARY_STORAGE = {
     'CLOUDINARY_URL' : os.environ.get('CLOUDINARY_URL')
 }
 
+MEDIA_URL = '/media/'
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
