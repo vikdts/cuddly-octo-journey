@@ -22,3 +22,4 @@ class ProfileDetail(APIView):
     def get(self, request, pk):
         profile = self.get_object(pk)
         serializer = ProfileSerializer(profile)
+        return Response(serializer.data)
