@@ -18,3 +18,6 @@ class ProfileDetail(APIView):
             return profile
         except Profile.DoesNotExist:
             raise Http404
+
+    def get(self, request, pk):
+
