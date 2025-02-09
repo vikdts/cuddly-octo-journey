@@ -6,5 +6,5 @@ from .serializers import ProfileSerializer
 # Create your views here.
 class ProfileList(APIView):
     def get(self, request):
-    profiles = Profile.objects.all()
-    return Response(serializer.data)
+        profiles = Profile.objects.all()
+        return Response(serializer.data)
