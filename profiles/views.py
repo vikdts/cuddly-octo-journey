@@ -4,3 +4,5 @@ from .models import Profile
 
 # Create your views here.
 class ProfileList(APIView):
+    def get(self, request):
+
