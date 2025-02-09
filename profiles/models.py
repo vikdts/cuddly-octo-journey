@@ -11,3 +11,6 @@ class Profile(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_profile_reesea'
     )
+    class Meta:
+        ordering = ['-created_at']
+
