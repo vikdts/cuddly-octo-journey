@@ -3,3 +3,4 @@ from rest_framework.response import Response
 from .models import Profile
 
 # Create your views here.
+class ProfileList(APIView):
