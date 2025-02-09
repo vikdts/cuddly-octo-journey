@@ -20,4 +20,5 @@ class ProfileDetail(APIView):
             raise Http404
 
     def get(self, request, pk):
+        profile = self.get_object(pk)
 
