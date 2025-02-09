@@ -12,3 +12,7 @@ class ProfileList(APIView):
 
 class ProfileDetail(APIView):
     def get_object(self, pk):
+        try:
+            profile = Profile.objects.get(pk=pk)
+            return profile
+
