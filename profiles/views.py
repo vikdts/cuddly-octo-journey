@@ -11,3 +11,4 @@ class ProfileList(APIView):
         return Response(serializer.data)
 
 class ProfileDetail(APIView):
+    def get_object(self, pk):
