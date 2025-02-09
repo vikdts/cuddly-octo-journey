@@ -15,4 +15,5 @@ class ProfileDetail(APIView):
         try:
             profile = Profile.objects.get(pk=pk)
             return profile
-
+        except Profile.DoesNotExist:
+            raise Http404
