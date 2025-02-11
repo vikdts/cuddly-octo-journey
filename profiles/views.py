@@ -25,3 +25,4 @@ class ProfileDetail(APIView):
         return Response(serializer.data)
 
     def put(self, request, pk):
+        profile = self.get_object(pk)
