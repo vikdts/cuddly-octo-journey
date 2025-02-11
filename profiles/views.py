@@ -23,3 +23,5 @@ class ProfileDetail(APIView):
         profile = self.get_object(pk)
         serializer = ProfileSerializer(profile)
         return Response(serializer.data)
+
+    def put(self, request, pk):
