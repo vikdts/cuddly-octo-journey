@@ -28,6 +28,8 @@ class ProfileDetail(APIView):
         profile = self.get_object(pk)
         serializer = ProfileSerializer(profile, data=request.data)
         if serializer.is_valid():
-        serializer.save()
+            serializer.save()
+            return Response(serializer.data)
+
 
 
