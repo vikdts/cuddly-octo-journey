@@ -5,6 +5,8 @@ class ProfileSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
 
+    def get_is_owner(self, obj):
+
     class Meta:
         model = Profile
         fields = [
