@@ -11,6 +11,8 @@ class Post(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_post_el80cg', blank=True
     )
+    class Meta:
+        ordering = ['-created_at']
 
 
 
