@@ -14,3 +14,4 @@ class PostList(APIView):
     ]
     serializer_class = PostSerializer
 
+    def get_object(self, pk):
