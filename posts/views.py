@@ -13,3 +13,5 @@ class PostList(APIView):
             posts, many=True, context={'request': request}
         )
         return Response(serializer.data)
+
+    def post(self, request):
