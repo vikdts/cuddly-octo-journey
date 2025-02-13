@@ -24,3 +24,6 @@ class PostList(APIView):
 
     def get(self, request, pk):
         post = self.get_object(pk)
+        serializer = PostSerializer(
+            post, context={'request': request}
+        )
