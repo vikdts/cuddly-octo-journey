@@ -22,3 +22,4 @@ class PostList(APIView):
         except Post.DoesNotExist:
             raise Http404
 
+    def get(self, request, pk):
