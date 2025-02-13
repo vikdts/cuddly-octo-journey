@@ -18,3 +18,5 @@ class PostList(APIView):
         serializer = PostSerializer(
             data=request.data, context={'request': request}
         )
+        if serializer.is_valid():
+            serializer.save(owner=request.user)
