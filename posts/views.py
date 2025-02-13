@@ -33,3 +33,5 @@ class PostList(APIView):
         return Response(
             serializer.errors, status=status.HTTP_400_BAD_REQUEST
         )
+
+class PostDetail(APIView):
