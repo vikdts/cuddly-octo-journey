@@ -6,3 +6,4 @@ from .models import Post
 from .serializers import PostSerializer
 
 # Create your views here.
+class PostList(APIView):
