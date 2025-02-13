@@ -12,4 +12,5 @@ class PostList(APIView):
     permission_classes = [
         permissions.IsAuthenticatedOrReadOnly
     ]
+    serializer_class = PostSerializer
 
