@@ -17,3 +17,5 @@ class PostList(APIView):
     def get_object(self, pk):
         try:
             post = Post.objects.get(pk=pk)
+            self.check_object_permissions(self.request, post)
+
