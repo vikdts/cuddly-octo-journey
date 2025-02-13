@@ -23,3 +23,4 @@ class PostList(APIView):
             raise Http404
 
     def get(self, request, pk):
+        post = self.get_object(pk)
