@@ -15,3 +15,5 @@ class PostList(APIView):
     serializer_class = PostSerializer
 
     def get_object(self, pk):
+        try:
+            post = Post.objects.get(pk=pk)
