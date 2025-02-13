@@ -12,3 +12,4 @@ class PostList(APIView):
         serializer = PostSerializer(
             posts, many=True, context={'request': request}
         )
+        return Response(serializer.data)
