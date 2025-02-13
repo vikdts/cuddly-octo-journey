@@ -8,3 +8,4 @@ from .serializers import PostSerializer
 # Create your views here.
 class PostList(APIView):
     def get(self, request):
+        posts = Post.objects.all()
