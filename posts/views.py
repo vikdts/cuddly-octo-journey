@@ -27,3 +27,4 @@ class PostList(APIView):
         serializer = PostSerializer(
             post, context={'request': request}
         )
+        return Response(serializer.data)
