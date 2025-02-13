@@ -15,6 +15,10 @@ class PostSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 'Image height larger than 4096px!'
             )
+        if value.image.width > 4096:
+            raise serializers.ValidationError(
+                'Image width larger than 4096px!'
+            )
 
     def get_is_owner(self, obj):
         request = self.context['request']
