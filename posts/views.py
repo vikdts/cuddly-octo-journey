@@ -8,6 +8,9 @@ from .serializers import PostSerializer
 # Create your views here.
 class PostList(APIView):
     serializer_class = PostSerializer
+    permission_classes = [
+        permissions.IsAuthenticatedOrReadOnly
+    ]
 
     def get(self, request):
         posts = Post.objects.all()
