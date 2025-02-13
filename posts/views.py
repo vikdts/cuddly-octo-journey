@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, permissions
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -8,7 +8,7 @@ from .serializers import PostSerializer
 # Create your views here.
 class PostList(APIView):
     serializer_class = PostSerializer
-    
+
     def get(self, request):
         posts = Post.objects.all()
         serializer = PostSerializer(
