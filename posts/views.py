@@ -55,3 +55,5 @@ class PostDetail(APIView):
             post, context={'request': request}
         )
         return Response(serializer.data)
+
+    def put(self, request, pk):
