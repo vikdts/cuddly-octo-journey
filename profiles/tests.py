@@ -10,3 +10,4 @@ class PostListViewTests(APITestCase):
 
     def test_can_list_posts(self):
         asd = User.objects.get(username='asd')
+        Post.objects.create(owner=asd, title='a title')
