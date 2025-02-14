@@ -14,4 +14,5 @@ class PostListViewTests(APITestCase):
         response = self.client.get('/posts/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         print(response.data)
+        print(len(response.data))
 
