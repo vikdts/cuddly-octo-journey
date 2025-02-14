@@ -7,3 +7,5 @@ from rest_framework.test import APITestCase
 class PostListViewTests(APITestCase):
     def setUp(self):
         User.objects.create_user(username='asd', password='svQeniPl')
+
+    def test_can_list_posts(self):
