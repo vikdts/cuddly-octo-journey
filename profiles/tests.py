@@ -20,3 +20,4 @@ class PostListViewTests(APITestCase):
         self.client.login(username='asd', password='svQeniPl')
         response = self.client.post('/posts/', {'title': 'a title'})
         count = Post.objects.count()
+        self.assertEqual(count, 1)
