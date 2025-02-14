@@ -9,3 +9,4 @@ class PostListViewTests(APITestCase):
         User.objects.create_user(username='asd', password='svQeniPl')
 
     def test_can_list_posts(self):
+        asd = User.objects.get(username='asd')
