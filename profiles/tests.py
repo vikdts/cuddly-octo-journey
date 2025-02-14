@@ -17,3 +17,4 @@ class PostListViewTests(APITestCase):
         print(len(response.data))
 
     def test_logged_in_user_can_create_post(self):
+        self.client.login(username='asd', password='svQeniPl')
