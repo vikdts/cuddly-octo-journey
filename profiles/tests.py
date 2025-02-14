@@ -5,3 +5,4 @@ from rest_framework.test import APITestCase
 
 # Create your tests here.
 class PostListViewTests(APITestCase):
+    def setUp(self):
