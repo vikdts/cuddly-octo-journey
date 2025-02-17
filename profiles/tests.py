@@ -52,4 +52,5 @@ class PostDetailViewTests(APITestCase):
         self.client.login(username='asd', password='svQeniPl')
         response = self.client.put('/posts/1/', {'title': 'a new title'})
         post = Post.objects.filter(pk=1).first()
+        self.assertEqual(post.title, 'a new title')
 
