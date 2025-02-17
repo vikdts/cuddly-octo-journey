@@ -46,3 +46,4 @@ class PostDetailViewTests(APITestCase):
 
     def test_cant_retrieve_post_using_invalid_id(self):
         response = self.client.get('/posts/999/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
