@@ -39,3 +39,4 @@ class PostDetailViewTests(APITestCase):
             owner=qwe, title='another title', content='qwes content'
         )
 
+    def test_can_retrieve_post_using_valid_id(self):
