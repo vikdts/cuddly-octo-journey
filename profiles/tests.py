@@ -57,5 +57,6 @@ class PostDetailViewTests(APITestCase):
 
     def test_user_cant_update_another_users_post(self):
         self.client.login(username='asd', password='svQeniPl')
+        response = self.client.put('/posts/2/', {'title': 'a new title'})
 
 
