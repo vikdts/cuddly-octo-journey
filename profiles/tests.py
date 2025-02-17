@@ -40,3 +40,4 @@ class PostDetailViewTests(APITestCase):
         )
 
     def test_can_retrieve_post_using_valid_id(self):
+        response = self.client.get('/posts/1/')
