@@ -4,3 +4,4 @@ from posts.models import Post
 
 # Create your models here.
 class Comment(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
