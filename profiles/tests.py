@@ -51,4 +51,5 @@ class PostDetailViewTests(APITestCase):
     def test_user_can_update_own_post(self):
         self.client.login(username='asd', password='svQeniPl')
         response = self.client.put('/posts/1/', {'title': 'a new title'})
+        post = Post.objects.filter(pk=1).first()
 
