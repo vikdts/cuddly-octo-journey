@@ -7,3 +7,4 @@ from .serializers import CommentSerializer, CommentDetailSerializer
 # Create your views here.
 class CommentList(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
