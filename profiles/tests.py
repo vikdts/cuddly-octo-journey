@@ -53,4 +53,5 @@ class PostDetailViewTests(APITestCase):
         response = self.client.put('/posts/1/', {'title': 'a new title'})
         post = Post.objects.filter(pk=1).first()
         self.assertEqual(post.title, 'a new title')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
