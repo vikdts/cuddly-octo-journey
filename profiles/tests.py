@@ -29,3 +29,4 @@ class PostListViewTests(APITestCase):
 
 
 class PostDetailViewTests(APITestCase):
+    def setUp(self):
