@@ -30,3 +30,4 @@ class PostListViewTests(APITestCase):
 
 class PostDetailViewTests(APITestCase):
     def setUp(self):
+        asd = User.objects.create_user(username='asd', password='svQeniPl')
