@@ -42,5 +42,5 @@ class PostDetailViewTests(APITestCase):
     def test_can_retrieve_post_using_valid_id(self):
         response = self.client.get('/posts/1/')
         self.assertEqual(response.data['title'], 'a title')
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
 
