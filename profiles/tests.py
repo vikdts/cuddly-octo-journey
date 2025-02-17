@@ -49,3 +49,4 @@ class PostDetailViewTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def test_user_can_update_own_post(self):
+        self.client.login(username='asd', password='svQeniPl')
