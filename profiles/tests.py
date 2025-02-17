@@ -32,3 +32,6 @@ class PostDetailViewTests(APITestCase):
     def setUp(self):
         asd = User.objects.create_user(username='asd', password='svQeniPl')
         qwe = User.objects.create_user(username='qwe', password='niFctKlo')
+        Post.objects.create(
+            owner=asd, title='a title', content='asds content'
+        )
