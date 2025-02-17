@@ -35,3 +35,7 @@ class PostDetailViewTests(APITestCase):
         Post.objects.create(
             owner=asd, title='a title', content='asds content'
         )
+        Post.objects.create(
+            owner=qwe, title='another title', content='qwes content'
+        )
+
