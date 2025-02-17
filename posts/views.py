@@ -36,9 +36,7 @@ class PostList(APIView):
         )
 
 class PostDetail(APIView):
-    permission_classes = [
-        permissions.IsAuthenticatedOrReadOnly
-    ]
+    permission_classes = [IsOwnerOrReadOnly]
     serializer_class = PostSerializer
 
     def get_object(self, pk):
