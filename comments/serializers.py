@@ -12,3 +12,4 @@ class CommentSerializer(serializers.ModelSerializer):
         return request.user == obj.owner
 
     class Meta:
+        model = Comment
