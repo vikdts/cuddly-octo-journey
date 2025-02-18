@@ -12,3 +12,4 @@ class Like(models.Model):
 
     class Meta:
         ordering = ['-created_at']
+        unique_together = ['owner', 'post']
