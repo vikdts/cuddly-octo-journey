@@ -11,3 +11,4 @@ class LikeList(generics.ListCreateAPIView):
     queryset = Like.objects.all()
 
     def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
