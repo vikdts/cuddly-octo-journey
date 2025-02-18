@@ -9,3 +9,5 @@ class Like(models.Model):
         Post, related_name='likes', on_delete=models.CASCADE
     )
     created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
