@@ -12,3 +12,5 @@ class FollowerSerializer(serializers.ModelSerializer):
         ]
    
     def create(self, validated_data):
+        try:
+            return super().create(validated_data)
