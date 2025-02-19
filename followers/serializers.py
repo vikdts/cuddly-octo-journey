@@ -6,3 +6,4 @@ class FollowerSerializer(serializers.ModelSerializer):
     followed_name = serializers.ReadOnlyField(source='followed.username')
 
     class Meta:
+        model = Follower
