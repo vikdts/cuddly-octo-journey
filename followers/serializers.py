@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Follower
+from django.db import IntegrityError
 
 class FollowerSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
