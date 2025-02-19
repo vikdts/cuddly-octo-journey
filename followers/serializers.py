@@ -10,3 +10,5 @@ class FollowerSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'created_at', 'followed', 'followed_name'
         ]
+   
+    def create(self, validated_data):
