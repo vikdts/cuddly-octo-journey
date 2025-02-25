@@ -9,31 +9,14 @@ from drf_api.permissions import IsOwnerOrReadOnly
 
 # Create your views here.
 
-class PostList(APIView):
+class PostList(generics.ListCreateAPIView):
     permission_classes = [
         permissions.IsAuthenticatedOrReadOnly
     ]
     serializer_class = PostSerializer
+    queryset = Post.objects.all()
 
-    def get(self, request):
-        posts = Post.objects.all()
-        serializer = PostSerializer(
-            posts, many=True, context={'request': request}
-        )
-        return Response(serializer.data)
-
-    def post(self, request):
-        serializer = PostSerializer(
-            data=request.data, context={'request': request}
-        )
-        if serializer.is_valid():
-            serializer.save(owner=request.user)
-            return Response(
-                serializer.data, status=status.HTTP_201_CREATED
-            )
-        return Response(
-            serializer.errors, status=status.HTTP_400_BAD_REQUEST
-        )
+    
 
 class PostDetail(APIView):
     permission_classes = [IsOwnerOrReadOnly]
