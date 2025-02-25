@@ -10,9 +10,9 @@ from rest_framework import generics
 # Create your views here.
 class ProfileList(generics.ListAPIView):
     queryset = Profile.objects.all()
-    serializer = ProfileSerializer
+    serializer_class = ProfileSerializer
 
-class ProfileDetail(APIView):
+class ProfileDetail(generics.RetrieveUpdateAPIView):
     serializer_class = ProfileSerializer
     permission_classes = [IsOwnerOrReadOnly]
     def get_object(self, pk):
