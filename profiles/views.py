@@ -8,7 +8,7 @@ from drf_api.permissions import IsOwnerOrReadOnly
 from rest_framework import generics
 
 # Create your views here.
-class ProfileList(APIView):
+class ProfileList(generics.ListAPIView):
     def get(self, request):
         profiles = Profile.objects.all()
         serializer = ProfileSerializer(
