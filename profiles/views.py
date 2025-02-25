@@ -9,12 +9,8 @@ from rest_framework import generics
 
 # Create your views here.
 class ProfileList(generics.ListAPIView):
-    def get(self, request):
-        profiles = Profile.objects.all()
-        serializer = ProfileSerializer(
-            profiles, many=True, context={'request': request}
-        )
-        return Response(serializer.data)
+    queryset = Profile.objects.all()
+    serializer = ProfileSerializer
 
 class ProfileDetail(APIView):
     serializer_class = ProfileSerializer
