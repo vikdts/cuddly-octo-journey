@@ -20,3 +20,6 @@ class Ad(models.Model):
     image = models.ImageField(
         upload_to='ad_images/', default='../default_post_el80cg', blank=True
     )
+    image_filter = models.CharField(
+        max_length=32, choices=image_filter_choices, default='normal'
+    )
