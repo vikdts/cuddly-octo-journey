@@ -16,9 +16,12 @@ class PostList(generics.ListCreateAPIView):
     serializer_class = PostSerializer
     queryset = Post.objects.all()
 
+    def perform_create(self, serializer):
+
     
 
 class PostDetail(APIView):
+    
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = PostSerializer
 
