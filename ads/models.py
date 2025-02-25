@@ -24,3 +24,7 @@ class Ad(models.Model):
         max_length=32, choices=image_filter_choices, default='normal'
     )
     is_active = models.BooleanField(default=True)
+
+
+    class Meta:
+        ordering = ['-created_at']
