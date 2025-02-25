@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from .models import Profile
 from .serializers import ProfileSerializer
 from drf_api.permissions import IsOwnerOrReadOnly
+from rest_framework import generics
 
 # Create your views here.
 class ProfileList(APIView):
