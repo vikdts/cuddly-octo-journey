@@ -17,11 +17,12 @@ class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
 
     def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
     
 
 class PostDetail(APIView):
-    
+
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = PostSerializer
 
