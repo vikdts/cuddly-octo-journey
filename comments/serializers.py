@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Comment
+from django.contrib.contenttypes.models import ContentType
 
 class CommentSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
