@@ -7,7 +7,7 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 # Create your models here.
 class Comment(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, default=ContentType.objects.get_for_model(Post))
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
     created_at = models.DateTimeField(auto_now_add=True)
