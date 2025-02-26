@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from posts.models import Post
+from posts.models import Post, Ad
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
 
@@ -8,7 +8,7 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 class Comment(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, default=ContentType.objects.get_for_model(Post))
-    object_id = models.PositiveIntegerField()
+    object_id = models.PositiveIntegerField(default=Post.objects.first().id)
     content_object = GenericForeignKey('content_type', 'object_id')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
