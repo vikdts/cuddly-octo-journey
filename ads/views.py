@@ -14,3 +14,4 @@ class AdList(generics.ListCreateAPIView):
         serializer.save(owner=self.request.user)
 
 class AdDetail(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [IsOwnerOrReadOnly]
