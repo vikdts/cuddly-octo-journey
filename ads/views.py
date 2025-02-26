@@ -15,3 +15,4 @@ class AdList(generics.ListCreateAPIView):
 
 class AdDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = AdSerializer
