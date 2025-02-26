@@ -8,3 +8,4 @@ from drf_api.permissions import IsOwnerOrReadOnly
 class AdList(generics.ListCreateAPIView):
     serializer_class = AdSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    queryset = Ad.objects.all()
