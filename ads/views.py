@@ -6,3 +6,4 @@ from drf_api.permissions import IsOwnerOrReadOnly
 
 # Create your views here.
 class AdList(generics.ListCreateAPIView):
+    serializer_class = AdSerializer
