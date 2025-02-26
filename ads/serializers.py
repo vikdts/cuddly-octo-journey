@@ -29,5 +29,5 @@ class AdSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'is_owner', 'profile_id', 'profile_image',
             'created_at', 'updated_at', 'title',
-            'content', 'image', 'is_active'
+            'content', 'image', 'is_active', 'map_embed_code'
         ]
