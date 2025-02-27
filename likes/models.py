@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib.contenttypes.models import ContentType
-from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.fields import GenericRelation
+from comments.models import Comment
+from likes.models import Like
 
 # Create your models here.
 class Like(models.Model):

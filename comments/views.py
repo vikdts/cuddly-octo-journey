@@ -9,6 +9,7 @@ from django.contrib.contenttypes.models import ContentType
 class CommentList(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    queryset = Comment.objects.all()
 
     def perform_create(self, serializer):
         content_type = ContentType.objects.get_for_model(self.get_object())
