@@ -4,11 +4,10 @@ from django.db import IntegrityError
 
 class LikeSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
-    object_id = serializers.IntegerField()
 
     class Meta:
         model = Like
-        fields = ['id', 'owner', 'created_at', 'object_id', 'content_object']
+        fields = ['id', 'created_at', 'owner', 'post']
 
     def create(self, validated_data):
         try:

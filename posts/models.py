@@ -1,8 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib.contenttypes.fields import GenericRelation
-from comments.models import Comment
-from likes.models import Like
 
 # Create your models here.
 class Post(models.Model):
@@ -26,8 +23,7 @@ class Post(models.Model):
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
     )
-    comments = GenericRelation(Comment)
-    likes = GenericRelation(Like)
+
     
     class Meta:
         ordering = ['-created_at']
