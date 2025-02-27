@@ -5,6 +5,8 @@ from django.contrib.contenttypes.models import ContentType
 
 class LikeSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
+    content_type = serializers.SlugRelatedField(slug_field="model", queryset=ContentType.objects.all())
+    object_id = serializers.IntegerField()
 
     class Meta:
         model = Like
