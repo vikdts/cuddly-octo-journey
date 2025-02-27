@@ -16,4 +16,4 @@ class Like(models.Model):
         unique_together = ['owner', 'content_type', 'object_id']
 
     def __str__(self):
-        return f'{self.owner} {self.post}'
+        return f'{self.owner} {self.content_object}'
