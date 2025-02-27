@@ -1,10 +1,8 @@
 from rest_framework import serializers
 from .models import Comment
-from django.contrib.contenttypes.models import ContentType
 
 class CommentSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
-    content_type = serializers.SlugRelatedField(queryset=ContentType.objects.all(), slug_field='model')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
@@ -18,7 +16,7 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = [
             'id', 'owner', 'is_owner', 'profile_id', 'profile_image', 
-            'content_type', 'object_id', 'created_at', 'updated_at', 'content'
+            'object_id', 'created_at', 'updated_at', 'content', 'content_object'
         ]
 
 class CommentDetailSerializer(CommentSerializer):
