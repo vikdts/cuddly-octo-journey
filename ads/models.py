@@ -29,6 +29,8 @@ class Ad(models.Model):
     is_active = models.BooleanField(default=True)
     map_embed_code = models.TextField(blank=True, null=True) 
 
+    comments = GenericRelation(Comment)
+    likes = GenericRelation(Like)
 
     class Meta:
         ordering = ['-created_at']
