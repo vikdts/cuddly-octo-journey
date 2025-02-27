@@ -26,6 +26,9 @@ class Post(models.Model):
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
     )
+    comments = GenericRelation(Comment)
+    likes = GenericRelation(Like)
+    
     class Meta:
         ordering = ['-created_at']
 
