@@ -6,9 +6,9 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 # Create your models here.
 class Like(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(
-        Post, related_name='likes', on_delete=models.CASCADE
-    )
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE, null=True)
+    object_id = models.PositiveIntegerField(null=True)
+    content_object = GenericForeignKey('content_type', 'object_id')
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
