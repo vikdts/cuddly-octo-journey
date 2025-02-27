@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib.contenttypes.fields import GenericRelation
-from comments.models import Comment
-from likes.models import Like
+
 
 # Create your models here.
 class Ad(models.Model):
@@ -28,9 +26,6 @@ class Ad(models.Model):
     )
     is_active = models.BooleanField(default=True)
     map_embed_code = models.TextField(blank=True, null=True) 
-
-    comments = GenericRelation(Comment)
-    likes = GenericRelation(Like)
 
     class Meta:
         ordering = ['-created_at']
