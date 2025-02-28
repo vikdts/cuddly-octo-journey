@@ -14,6 +14,8 @@ class ProfileSerializer(serializers.ModelSerializer):
     def get_following_id(self, obj):
         user = self.context['request'].user
         if user.is_authenticated:
+            following = Follower.objects.filter(
+                owner=user, followed=obj.owner).first()
 
     class Meta:
         model = Profile
