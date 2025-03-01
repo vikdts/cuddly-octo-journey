@@ -8,7 +8,9 @@ from rest_framework import generics, filters
 class ProfileList(generics.ListAPIView):
     queryset = Profile.objects.annotate(
         posts_count=Count('owner__post', distinct=True),
-        ads_count=Count('owner__ad', distinct=True)
+        ads_count=Count('owner__ad', distinct=True),
+        followers_count=Count('owner__followed', distinct=True),
+        following_count=Count('owner__following', distinct=True)
     )
     serializer_class = ProfileSerializer
 
