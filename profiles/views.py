@@ -6,7 +6,10 @@ from rest_framework import generics, filters
 
 # Create your views here.
 class ProfileList(generics.ListAPIView):
-    queryset = Profile.objects.all()
+    queryset = Profile.objects.annotate(
+        posts_count=Count('owner__post', distinct=True),
+        ads_count=Count('owner__ad', distinct=True)
+    )
     serializer_class = ProfileSerializer
 
 class ProfileDetail(generics.RetrieveUpdateAPIView):
