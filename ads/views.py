@@ -24,4 +24,7 @@ class AdList(generics.ListCreateAPIView):
 class AdDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = AdSerializer
-    queryset = Ad.objects.all()
+    queryset = Ad.objects.annotate(
+        likes_count=Count('likes', distinct=True),
+        comments_count=Count('comment', distinct=True)
+    ).order_by('-created_at')
