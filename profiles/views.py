@@ -16,6 +16,14 @@ class ProfileList(generics.ListAPIView):
     filter_backends = [
         filters.OrderingFilter
     ]
+    ordering_fields = [
+        'posts_count',
+        'ads',
+        'followers_count',
+        'following_count',
+        'owner__following__created_at',
+        'owner__followed__created_at',
+    ]
 
 class ProfileDetail(generics.RetrieveUpdateAPIView):
     serializer_class = ProfileSerializer
