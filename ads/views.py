@@ -8,7 +8,10 @@ from drf_api.permissions import IsOwnerOrReadOnly
 class AdList(generics.ListCreateAPIView):
     serializer_class = AdSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    queryset = Ad.objects.all()
+    queryset = Ad.objects.annotate(
+        likes_count=Count('likes', distinct=True),
+        comments_count=Count('comment', distinct=True)
+    ).order_by('-created_at')
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
