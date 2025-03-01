@@ -28,7 +28,12 @@ class AdSerializer(serializers.ModelSerializer):
 
     def get_like_id(self, obj):
         user = self.context['request'].user
-
+        if user.is_authenticated:
+            like = Like.objects.filter(
+                owner=user, ad=obj
+            ).first()
+            return like.id if like else None
+        return None
 
     class Meta:
         model = Ad
