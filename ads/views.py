@@ -1,4 +1,5 @@
-from rest_framework import generics, permissions
+from django.db.models import Count
+from rest_framework import generics, permissions, filters
 from .models import Ad
 from .serializers import AdSerializer
 from drf_api.permissions import IsOwnerOrReadOnly
