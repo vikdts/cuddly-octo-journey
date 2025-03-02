@@ -112,6 +112,8 @@ CORS_ALLOWED_ORIGINS = [
     ] if origin
 ]
 
+CORS_ALLOW_CREDENTIALS = True
+
 ROOT_URLCONF = 'drf_api.urls'
 
 TEMPLATES = [
