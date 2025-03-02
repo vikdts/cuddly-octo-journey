@@ -29,7 +29,8 @@ python3-openid==3.2.0
 pytz==2024.2
 requests==2.32.3
 requests-oauthlib==2.0.0
-six==1.15.0sqlparse==0.5.3
+six==1.15.0
+sqlparse==0.5.3
 typing_extensions==4.12.2
 urllib3==1.26.20
 whitenoise==6.9.0
