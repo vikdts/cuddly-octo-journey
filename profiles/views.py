@@ -3,6 +3,7 @@ from .models import Profile
 from .serializers import ProfileSerializer
 from drf_api.permissions import IsOwnerOrReadOnly
 from rest_framework import generics, filters
+from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
 class ProfileList(generics.ListAPIView):
@@ -14,7 +15,8 @@ class ProfileList(generics.ListAPIView):
     ).order_by('-created_at')
     serializer_class = ProfileSerializer
     filter_backends = [
-        filters.OrderingFilter
+        filters.OrderingFilter,
+        DjangoFilterBackend,
     ]
     ordering_fields = [
         'posts_count',
