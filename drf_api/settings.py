@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
- import dj_database_url
+import dj_database_url
 
 if os.path.exists('env.py'):
     import env
@@ -61,7 +61,7 @@ SECRET_KEY = 'django-insecure-sl-2mz9y*(%k7w%sw(oqc4u5e39c*x@v1vj4#c$p@)n!w5p4d9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://cuddly-octo-journey-9a4868450ef0.herokuapp.com']
 
 
 # Application definition
@@ -128,17 +128,17 @@ WSGI_APPLICATION = 'drf_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
- if 'DEV' in os.environ:
-     DATABASES = {
-         'default': {
-             'ENGINE': 'django.db.backends.sqlite3',
-             'NAME': BASE_DIR / 'db.sqlite3',
-         }
-     }
- else:
-     DATABASES = {
-         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-     }
+if 'DEV' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
 
 
 # Password validation
